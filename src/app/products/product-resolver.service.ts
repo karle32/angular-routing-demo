@@ -11,10 +11,10 @@ import { IProduct } from './product';
 
 
 @Injectable()
-export class ProductResolver implements Resolve<IProduct>{
+export class ProductResolver implements Resolve<IProduct> {
 
     constructor(private productService: ProductService,
-                private router: Router){}
+                private router: Router) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IProduct> {
         let id = route.params['id'];
